@@ -1,11 +1,46 @@
-class Quiz:
-    def __init__(self):
-        self.answers = []
+print("Welcome to the Dog Training Assistant!")
 
-    def add_answer(self, answer):
-        self.answers.append(answer)
+age = int(input("What is the age of the puppy (in months)? "))
 
-dog_ages[]
+prior_training = input("Has the dog had prior training? (yes/no): ")
 
-print("which one of these best describes your dog's age?")
-print("Options: puppy, adolescent, adult")
+training_goal = input("What is the training goal? (tricks / behavior / both): ")
+
+breed_type = input("What type of breed is it? (herding / working / toy / sporting): ")
+
+print("\nThank you! Generating your training plan...")
+
+def generate_training_plan(age, prior_training, training_goal, breed_type):
+
+    plan = []
+
+    print("\n--- Training Plan ---")
+
+    if age < 6:
+        plan.append("Keep sessions short (5-10 minutes). Focus on basic commands.")
+    else:
+        plan.append("Longer sessions are okay. Reinforce consistency.")
+
+    if prior_training == "yes":
+        plan.append("Build on previously learned commands.")
+    else:
+        plan.append("Start with basic obedience like sit, stay, and recall.")
+
+
+    if training_goal == "tricks":
+        plan.append("Focus on fun tricks like shake, roll over, and spin.")
+    elif training_goal == "behavior":
+        plan.append("Focus on good manners like leash walking and no jumping.")
+    else:
+        plan.append("Balance obedience training with fun tricks.")
+
+    if breed_type == "herding":
+        plan.append("Provide mental challenges and structured tasks.")
+    elif breed_type == "working":
+        plan.append("Include physical activity and task-based training.")
+    elif breed_type == "toy":
+        plan.append("Use gentle training and lots of positive reinforcement.")
+    elif breed_type == "sporting":
+        plan.append("Use active games and reward-based training.")
+
+        return plan
