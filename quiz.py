@@ -1,16 +1,5 @@
-print("Welcome to the Dog Training Assistant!")
 
-age = int(input("What is the age of the puppy (in months)? "))
-
-prior_training = input("Has the dog had prior training? (yes/no): ")
-
-training_goal = input("What is the training goal? (tricks / behavior / both): ")
-
-breed_type = input("What type of breed is it? (herding / working / toy / sporting): ")
-
-print("\nThank you! Generating your training plan...")
-
-def generate_training_plan(age, prior_training, training_goal, breed_type):
+def generate_training_plan(age, prior_training, training_goal, breed_type) -> list:
 
     plan = []
 
@@ -43,4 +32,19 @@ def generate_training_plan(age, prior_training, training_goal, breed_type):
     elif breed_type == "sporting":
         plan.append("Use active games and reward-based training.")
 
-        return plan
+    return plan
+
+if __name__ == '__main__':
+
+    print("Welcome to the Dog Training Assistant!")
+
+    age = int(input("What is the age of the puppy (in months)? "))
+
+    prior_training = input("Has the dog had prior training? (yes/no): ")
+
+    training_goal = input("What is the training goal? (tricks / behavior / both): ")
+
+    breed_type = input("What type of breed is it? (herding / working / toy / sporting): ")
+
+    print("\nThank you! Generating your training plan...")
+    print(generate_training_plan(age, prior_training, training_goal, breed_type))
